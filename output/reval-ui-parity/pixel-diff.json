@@ -1,0 +1,359 @@
+[
+  {
+    "viewport": "1440x900",
+    "view": "assembly",
+    "exact": false,
+    "changed_pixel_percent": 43.21,
+    "above_16_channel_delta_percent": 31.84
+  },
+  {
+    "viewport": "1440x900",
+    "view": "audit",
+    "exact": false,
+    "changed_pixel_percent": 22.46,
+    "above_16_channel_delta_percent": 17.49
+  },
+  {
+    "viewport": "1440x900",
+    "view": "basket",
+    "exact": false,
+    "changed_pixel_percent": 48.26,
+    "above_16_channel_delta_percent": 45.43
+  },
+  {
+    "viewport": "1440x900",
+    "view": "dashboard",
+    "exact": false,
+    "changed_pixel_percent": 36.02,
+    "above_16_channel_delta_percent": 8.93
+  },
+  {
+    "viewport": "1440x900",
+    "view": "defects",
+    "exact": false,
+    "changed_pixel_percent": 31.84,
+    "above_16_channel_delta_percent": 29.92
+  },
+  {
+    "viewport": "1440x900",
+    "view": "final-qc",
+    "exact": false,
+    "changed_pixel_percent": 28.35,
+    "above_16_channel_delta_percent": 24.24
+  },
+  {
+    "viewport": "1440x900",
+    "view": "finished",
+    "exact": false,
+    "changed_pixel_percent": 37.53,
+    "above_16_channel_delta_percent": 34.64
+  },
+  {
+    "viewport": "1440x900",
+    "view": "handover",
+    "exact": false,
+    "changed_pixel_percent": 28.0,
+    "above_16_channel_delta_percent": 21.92
+  },
+  {
+    "viewport": "1440x900",
+    "view": "imei",
+    "exact": false,
+    "changed_pixel_percent": 25.75,
+    "above_16_channel_delta_percent": 19.9
+  },
+  {
+    "viewport": "1440x900",
+    "view": "inventory",
+    "exact": false,
+    "changed_pixel_percent": 40.97,
+    "above_16_channel_delta_percent": 26.31
+  },
+  {
+    "viewport": "1440x900",
+    "view": "login",
+    "exact": false,
+    "changed_pixel_percent": 16.67,
+    "above_16_channel_delta_percent": 2.16
+  },
+  {
+    "viewport": "1440x900",
+    "view": "master",
+    "exact": false,
+    "changed_pixel_percent": 38.31,
+    "above_16_channel_delta_percent": 35.2
+  },
+  {
+    "viewport": "1440x900",
+    "view": "reports",
+    "exact": false,
+    "changed_pixel_percent": 28.21,
+    "above_16_channel_delta_percent": 23.71
+  },
+  {
+    "viewport": "1440x900",
+    "view": "shipments",
+    "exact": false,
+    "changed_pixel_percent": 32.15,
+    "above_16_channel_delta_percent": 26.95
+  },
+  {
+    "viewport": "1440x900",
+    "view": "stage-qc",
+    "exact": false,
+    "changed_pixel_percent": 33.76,
+    "above_16_channel_delta_percent": 13.0
+  },
+  {
+    "viewport": "1440x900",
+    "view": "trace",
+    "exact": false,
+    "changed_pixel_percent": 10.74,
+    "above_16_channel_delta_percent": 9.63
+  },
+  {
+    "viewport": "1440x900",
+    "view": "users",
+    "exact": false,
+    "changed_pixel_percent": 24.49,
+    "above_16_channel_delta_percent": 16.76
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "assembly",
+    "exact": false,
+    "changed_pixel_percent": 44.36,
+    "above_16_channel_delta_percent": 35.2
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "audit",
+    "exact": false,
+    "changed_pixel_percent": 26.58,
+    "above_16_channel_delta_percent": 22.08
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "basket",
+    "exact": false,
+    "changed_pixel_percent": 52.18,
+    "above_16_channel_delta_percent": 49.5
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "dashboard",
+    "exact": false,
+    "changed_pixel_percent": 39.09,
+    "above_16_channel_delta_percent": 9.82
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "defects",
+    "exact": false,
+    "changed_pixel_percent": 27.37,
+    "above_16_channel_delta_percent": 25.61
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "final-qc",
+    "exact": false,
+    "changed_pixel_percent": 34.24,
+    "above_16_channel_delta_percent": 31.02
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "finished",
+    "exact": false,
+    "changed_pixel_percent": 44.57,
+    "above_16_channel_delta_percent": 41.93
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "handover",
+    "exact": false,
+    "changed_pixel_percent": 24.99,
+    "above_16_channel_delta_percent": 20.43
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "imei",
+    "exact": false,
+    "changed_pixel_percent": 23.19,
+    "above_16_channel_delta_percent": 17.82
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "inventory",
+    "exact": false,
+    "changed_pixel_percent": 46.99,
+    "above_16_channel_delta_percent": 32.5
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "login",
+    "exact": false,
+    "changed_pixel_percent": 9.87,
+    "above_16_channel_delta_percent": 1.33
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "master",
+    "exact": false,
+    "changed_pixel_percent": 43.8,
+    "above_16_channel_delta_percent": 41.11
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "reports",
+    "exact": false,
+    "changed_pixel_percent": 39.54,
+    "above_16_channel_delta_percent": 34.53
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "shipments",
+    "exact": false,
+    "changed_pixel_percent": 24.02,
+    "above_16_channel_delta_percent": 22.32
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "stage-qc",
+    "exact": false,
+    "changed_pixel_percent": 35.73,
+    "above_16_channel_delta_percent": 13.86
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "trace",
+    "exact": false,
+    "changed_pixel_percent": 8.8,
+    "above_16_channel_delta_percent": 8.03
+  },
+  {
+    "viewport": "1920x1080",
+    "view": "users",
+    "exact": false,
+    "changed_pixel_percent": 24.67,
+    "above_16_channel_delta_percent": 18.01
+  },
+  {
+    "viewport": "1024x768",
+    "view": "assembly",
+    "exact": false,
+    "changed_pixel_percent": 36.94,
+    "above_16_channel_delta_percent": 23.53
+  },
+  {
+    "viewport": "1024x768",
+    "view": "audit",
+    "exact": false,
+    "changed_pixel_percent": 15.15,
+    "above_16_channel_delta_percent": 9.97
+  },
+  {
+    "viewport": "1024x768",
+    "view": "basket",
+    "exact": false,
+    "changed_pixel_percent": 48.44,
+    "above_16_channel_delta_percent": 42.22
+  },
+  {
+    "viewport": "1024x768",
+    "view": "dashboard",
+    "exact": false,
+    "changed_pixel_percent": 42.2,
+    "above_16_channel_delta_percent": 15.34
+  },
+  {
+    "viewport": "1024x768",
+    "view": "defects",
+    "exact": false,
+    "changed_pixel_percent": 34.89,
+    "above_16_channel_delta_percent": 31.42
+  },
+  {
+    "viewport": "1024x768",
+    "view": "final-qc",
+    "exact": false,
+    "changed_pixel_percent": 26.77,
+    "above_16_channel_delta_percent": 19.58
+  },
+  {
+    "viewport": "1024x768",
+    "view": "finished",
+    "exact": false,
+    "changed_pixel_percent": 25.07,
+    "above_16_channel_delta_percent": 22.67
+  },
+  {
+    "viewport": "1024x768",
+    "view": "handover",
+    "exact": false,
+    "changed_pixel_percent": 34.3,
+    "above_16_channel_delta_percent": 31.91
+  },
+  {
+    "viewport": "1024x768",
+    "view": "imei",
+    "exact": false,
+    "changed_pixel_percent": 33.02,
+    "above_16_channel_delta_percent": 30.39
+  },
+  {
+    "viewport": "1024x768",
+    "view": "inventory",
+    "exact": false,
+    "changed_pixel_percent": 32.89,
+    "above_16_channel_delta_percent": 18.58
+  },
+  {
+    "viewport": "1024x768",
+    "view": "login",
+    "exact": false,
+    "changed_pixel_percent": 27.45,
+    "above_16_channel_delta_percent": 3.59
+  },
+  {
+    "viewport": "1024x768",
+    "view": "master",
+    "exact": false,
+    "changed_pixel_percent": 37.58,
+    "above_16_channel_delta_percent": 25.69
+  },
+  {
+    "viewport": "1024x768",
+    "view": "reports",
+    "exact": false,
+    "changed_pixel_percent": 24.13,
+    "above_16_channel_delta_percent": 22.56
+  },
+  {
+    "viewport": "1024x768",
+    "view": "shipments",
+    "exact": false,
+    "changed_pixel_percent": 32.46,
+    "above_16_channel_delta_percent": 25.51
+  },
+  {
+    "viewport": "1024x768",
+    "view": "stage-qc",
+    "exact": false,
+    "changed_pixel_percent": 34.42,
+    "above_16_channel_delta_percent": 13.24
+  },
+  {
+    "viewport": "1024x768",
+    "view": "trace",
+    "exact": false,
+    "changed_pixel_percent": 12.97,
+    "above_16_channel_delta_percent": 11.1
+  },
+  {
+    "viewport": "1024x768",
+    "view": "users",
+    "exact": false,
+    "changed_pixel_percent": 24.49,
+    "above_16_channel_delta_percent": 17.11
+  }
+]

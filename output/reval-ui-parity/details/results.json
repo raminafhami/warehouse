@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "label": "shipment",
+      "route": "/shipments/6b01ece1015cede3e3eedd12",
+      "title": "محمولهٔ SHP-000006"
+    },
+    {
+      "label": "handover",
+      "route": "/handover/6b01ece8015cede3e3eee078",
+      "title": "درخواست مواد REQ-000004"
+    },
+    {
+      "label": "production-order",
+      "route": "/imei/orders/6b01ece8015cede3e3eee049",
+      "title": "دستور تولید PO-000004"
+    },
+    {
+      "label": "basket",
+      "route": "/basket/6b01ece8015cede3e3eee057",
+      "title": "سبد BSK-000018"
+    },
+    {
+      "label": "final-qc",
+      "route": "/final-qc/6b01ece7015cede3e3eedfd9",
+      "title": "کیفیت نهایی · PH-000014"
+    },
+    {
+      "label": "defect",
+      "route": "/defects/cases/6b01ece1015cede3e3eedd93",
+      "title": "پروندهٔ خرابی · PH-000004"
+    },
+    {
+      "label": "return",
+      "route": "/defects/returns/6b01ece1015cede3e3eedd98",
+      "title": "سند مرجوعی RET-000001"
+    },
+    {
+      "label": "finished-carton",
+      "route": "/finished/cartons/6b01ece8015cede3e3eee07c",
+      "title": "کارتن محصول · MC-000002"
+    },
+    {
+      "label": "trace-carton",
+      "route": "/trace/material/6b01ece0015cede3e3eedcea",
+      "title": "زنجیرهٔ رهگیری"
+    },
+    {
+      "label": "station-visit",
+      "route": "/assembly/visits/6b01ece1015cede3e3eedd7b",
+      "title": "بدنه و فریم"
+    },
+    {
+      "label": "technical-queue",
+      "route": "/stage-qc/technical",
+      "title": "ارجاع‌های فنی"
+    }
+  ],
+  "errors": []
+}

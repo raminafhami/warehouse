@@ -1,0 +1,404 @@
+[
+  {
+    "viewport": "1440x900",
+    "route": "/",
+    "refTitle": "داشبورد",
+    "appTitle": "داشبورد",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/trace",
+    "refTitle": "رهگیری یکپارچه",
+    "appTitle": "رهگیری یکپارچه",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/shipments",
+    "refTitle": "تأمین‌کنندگان و محموله‌ها",
+    "appTitle": "تأمین‌کنندگان و محموله‌ها",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/inventory",
+    "refTitle": "موجودی، جانمایی و گردش کالا",
+    "appTitle": "موجودی، جانمایی و گردش کالا",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/handover",
+    "refTitle": "درخواست و تحویل قطعات به تولید",
+    "appTitle": "درخواست و تحویل قطعات به تولید",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/imei",
+    "refTitle": "مدیریت IMEI و برنامه تولید",
+    "appTitle": "مدیریت IMEI و برنامه تولید",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/basket",
+    "refTitle": "آماده‌سازی سبد · خط ۱",
+    "appTitle": "آماده‌سازی سبد",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/assembly",
+    "refTitle": "خط مونتاژ · خط ۱",
+    "appTitle": "خط مونتاژ · خط ۱",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/final-qc",
+    "refTitle": "کنترل کیفیت نهایی و بسته‌بندی",
+    "appTitle": "کنترل کیفیت نهایی و بسته‌بندی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/stage-qc",
+    "refTitle": "کنترل کیفیت مرحله‌ای",
+    "appTitle": "کنترل کیفیت مرحله‌ای",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/defects",
+    "refTitle": "قطعات معیوب، انبار معیوبی و مرجوعی",
+    "appTitle": "قطعات معیوب، انبار معیوبی و مرجوعی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/finished",
+    "refTitle": "انبار محصول نهایی",
+    "appTitle": "انبار محصول نهایی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/reports",
+    "refTitle": "گزارشات و خروجی PDF",
+    "appTitle": "گزارشات و خروجی PDF",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/master",
+    "refTitle": "مدیریت اطلاعات پایه",
+    "appTitle": "مدیریت اطلاعات پایه",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/users",
+    "refTitle": "کاربران، نقش‌ها و سطح دسترسی",
+    "appTitle": "کاربران، نقش‌ها و سطح دسترسی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "route": "/audit",
+    "refTitle": "تاریخچه فعالیت‌ها و گزارش ممیزی",
+    "appTitle": "تاریخچه فعالیت‌ها و گزارش ممیزی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1440x900",
+    "errors": [],
+    "apiErrors": [],
+    "referenceErrors": []
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/",
+    "refTitle": "داشبورد",
+    "appTitle": "داشبورد",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/trace",
+    "refTitle": "رهگیری یکپارچه",
+    "appTitle": "رهگیری یکپارچه",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/shipments",
+    "refTitle": "تأمین‌کنندگان و محموله‌ها",
+    "appTitle": "تأمین‌کنندگان و محموله‌ها",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/inventory",
+    "refTitle": "موجودی، جانمایی و گردش کالا",
+    "appTitle": "موجودی، جانمایی و گردش کالا",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/handover",
+    "refTitle": "درخواست و تحویل قطعات به تولید",
+    "appTitle": "درخواست و تحویل قطعات به تولید",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/imei",
+    "refTitle": "مدیریت IMEI و برنامه تولید",
+    "appTitle": "مدیریت IMEI و برنامه تولید",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/basket",
+    "refTitle": "آماده‌سازی سبد · خط ۱",
+    "appTitle": "آماده‌سازی سبد",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/assembly",
+    "refTitle": "خط مونتاژ · خط ۱",
+    "appTitle": "خط مونتاژ · خط ۱",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/final-qc",
+    "refTitle": "کنترل کیفیت نهایی و بسته‌بندی",
+    "appTitle": "کنترل کیفیت نهایی و بسته‌بندی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/stage-qc",
+    "refTitle": "کنترل کیفیت مرحله‌ای",
+    "appTitle": "کنترل کیفیت مرحله‌ای",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/defects",
+    "refTitle": "قطعات معیوب، انبار معیوبی و مرجوعی",
+    "appTitle": "قطعات معیوب، انبار معیوبی و مرجوعی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/finished",
+    "refTitle": "انبار محصول نهایی",
+    "appTitle": "انبار محصول نهایی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/reports",
+    "refTitle": "گزارشات و خروجی PDF",
+    "appTitle": "گزارشات و خروجی PDF",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/master",
+    "refTitle": "مدیریت اطلاعات پایه",
+    "appTitle": "مدیریت اطلاعات پایه",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/users",
+    "refTitle": "کاربران، نقش‌ها و سطح دسترسی",
+    "appTitle": "کاربران، نقش‌ها و سطح دسترسی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "route": "/audit",
+    "refTitle": "تاریخچه فعالیت‌ها و گزارش ممیزی",
+    "appTitle": "تاریخچه فعالیت‌ها و گزارش ممیزی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1920x1080",
+    "errors": [],
+    "apiErrors": [],
+    "referenceErrors": []
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/",
+    "refTitle": "داشبورد",
+    "appTitle": "داشبورد",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/trace",
+    "refTitle": "رهگیری یکپارچه",
+    "appTitle": "رهگیری یکپارچه",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/shipments",
+    "refTitle": "تأمین‌کنندگان و محموله‌ها",
+    "appTitle": "تأمین‌کنندگان و محموله‌ها",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/inventory",
+    "refTitle": "موجودی، جانمایی و گردش کالا",
+    "appTitle": "موجودی، جانمایی و گردش کالا",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/handover",
+    "refTitle": "درخواست و تحویل قطعات به تولید",
+    "appTitle": "درخواست و تحویل قطعات به تولید",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/imei",
+    "refTitle": "مدیریت IMEI و برنامه تولید",
+    "appTitle": "مدیریت IMEI و برنامه تولید",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/basket",
+    "refTitle": "آماده‌سازی سبد · خط ۱",
+    "appTitle": "آماده‌سازی سبد",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/assembly",
+    "refTitle": "خط مونتاژ · خط ۱",
+    "appTitle": "خط مونتاژ · خط ۱",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/final-qc",
+    "refTitle": "کنترل کیفیت نهایی و بسته‌بندی",
+    "appTitle": "کنترل کیفیت نهایی و بسته‌بندی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/stage-qc",
+    "refTitle": "کنترل کیفیت مرحله‌ای",
+    "appTitle": "کنترل کیفیت مرحله‌ای",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/defects",
+    "refTitle": "قطعات معیوب، انبار معیوبی و مرجوعی",
+    "appTitle": "قطعات معیوب، انبار معیوبی و مرجوعی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/finished",
+    "refTitle": "انبار محصول نهایی",
+    "appTitle": "انبار محصول نهایی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/reports",
+    "refTitle": "گزارشات و خروجی PDF",
+    "appTitle": "گزارشات و خروجی PDF",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/master",
+    "refTitle": "مدیریت اطلاعات پایه",
+    "appTitle": "مدیریت اطلاعات پایه",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/users",
+    "refTitle": "کاربران، نقش‌ها و سطح دسترسی",
+    "appTitle": "کاربران، نقش‌ها و سطح دسترسی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "route": "/audit",
+    "refTitle": "تاریخچه فعالیت‌ها و گزارش ممیزی",
+    "appTitle": "تاریخچه فعالیت‌ها و گزارش ممیزی",
+    "alerts": [],
+    "overflow": false
+  },
+  {
+    "viewport": "1024x768",
+    "errors": [],
+    "apiErrors": [],
+    "referenceErrors": []
+  }
+]
