@@ -13,7 +13,7 @@
     "dev": "npm run dev --workspace @reval/web",
     "dev:api": "npm run dev --workspace @reval/api",
     "lint": "eslint .",
-    "format:check": "prettier --check package.json jsconfig.json eslint.config.js \"apps/**/*.{js,jsx,json,css,html}\" \"docker/*.js\" \"compose*.yaml\" \".github/workflows/*.yml\"",
+    "format:check": "prettier --check package.json jsconfig.json eslint.config.js \"apps/**/*.{js,jsx,json,css,html}\" \"docker/*.js\" \"compose*.yaml\" \"../.github/workflows/*.yml\"",
     "typecheck": "tsc --project jsconfig.json",
     "build": "npm run build --workspaces",
     "test": "node --test apps/api/test/*.test.js",

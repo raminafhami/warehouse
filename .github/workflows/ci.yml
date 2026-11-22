@@ -10,6 +10,10 @@ on:
         required: true
         type: string
 
+defaults:
+  run:
+    working-directory: reval-app
+
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -17,8 +21,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: .nvmrc
+          node-version-file: reval-app/.nvmrc
           cache: npm
+          cache-dependency-path: reval-app/package-lock.json
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
@@ -88,7 +93,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version-file: .nvmrc
+          node-version-file: reval-app/.nvmrc
       - name: Verify Compose upgrade and rollback
         env:
           BASELINE_REF: ${{ inputs.previous_ref }}
@@ -98,5 +103,9 @@ jobs:
             echo "Choose a previous release that differs from the candidate." >&2
             exit 1
           fi
-          git worktree add --detach "$RUNNER_TEMP/reval-previous" "$baseline_sha"
-          node apps/api/test/support/compose-upgrade.js "$RUNNER_TEMP/reval-previous"
+          baseline_dir="$RUNNER_TEMP/reval-previous"
+          git worktree add --detach "$baseline_dir" "$baseline_sha"
+          if [ -f "$baseline_dir/reval-app/compose.yaml" ]; then
+            baseline_dir="$baseline_dir/reval-app"
+          fi
+          node apps/api/test/support/compose-upgrade.js "$baseline_dir"

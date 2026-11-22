@@ -49,13 +49,11 @@ try {
         source
           .collection("reval_users")
           .findOne({ username: "demo-reval", demoAccount: true }),
-        target
-          .collection("reval_users")
-          .findOne({
-            username: "reval-admin",
-            roleId: "superadmin",
-            active: true,
-          }),
+        target.collection("reval_users").findOne({
+          username: "reval-admin",
+          roleId: "superadmin",
+          active: true,
+        }),
         source
           .collection("reval_users")
           .find({ demoAccount: true, roleId: { $ne: "superadmin" } })
