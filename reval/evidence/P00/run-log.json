@@ -1,0 +1,138 @@
+{
+ "htmlSha256": "C8192697F27300A1756813E251AB7D0F7D932A81E12A56BF14980B1CB3229901",
+ "browser": "Chrome (system) via playwright-core 1.49.1, headless",
+ "node": "v22.19.0",
+ "network": "all non-file requests aborted",
+ "blockedRequests": [],
+ "pageErrors": [],
+ "prototypeClock": "2026-11-08T05:30:00.000Z",
+ "timezone": "Asia/Tehran",
+ "mobile": [
+  {
+   "key": "dashboard",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "trace",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "shipments",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "inventory",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "handover",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "imei",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "basket",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "assembly",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "finalQc",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "stageQc",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "defects",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "finished",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "reports",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "master",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "users",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "audit",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "basket-L2",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "basket-L3",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "assembly-L1",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "assembly-L2",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  },
+  {
+   "key": "assembly-L3",
+   "horizontalOverflow": true,
+   "scrollW": 426,
+   "clientW": 390
+  }
+ ]
+}

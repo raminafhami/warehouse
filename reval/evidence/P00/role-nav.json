@@ -1,0 +1,375 @@
+[
+ {
+  "roleId": "superadmin",
+  "roleName": "سوپر ادمین",
+  "userId": "U001",
+  "unit": "فناوری اطلاعات",
+  "scope": "همه",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/shipments",
+   "#/inventory",
+   "#/handover",
+   "#/imei",
+   "#/basket?line=L1",
+   "#/basket?line=L2",
+   "#/basket?line=L3",
+   "#/assembly?line=L1",
+   "#/assembly?line=L2",
+   "#/assembly?line=L3",
+   "#/final-qc",
+   "#/stage-qc",
+   "#/defects",
+   "#/finished",
+   "#/reports",
+   "#/master",
+   "#/users",
+   "#/audit"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "sysadmin",
+  "roleName": "مدیر سیستم",
+  "userId": "U002",
+  "unit": "فناوری اطلاعات",
+  "scope": "همه",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/imei",
+   "#/reports",
+   "#/master",
+   "#/users",
+   "#/audit"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "whManager",
+  "roleName": "مدیر انبار",
+  "userId": "U003",
+  "unit": "انبار مواد اولیه",
+  "scope": "WH-RM",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/shipments",
+   "#/inventory",
+   "#/handover",
+   "#/reports"
+  ],
+  "deniedPages": [
+   "basket",
+   "assembly",
+   "stageQc",
+   "finished",
+   "users",
+   "audit"
+  ]
+ },
+ {
+  "roleId": "whOperator",
+  "roleName": "اپراتور انبار",
+  "userId": "U004",
+  "unit": "انبار مواد اولیه",
+  "scope": "WH-RM",
+  "nav": [
+   "#/",
+   "#/shipments",
+   "#/inventory",
+   "#/handover"
+  ],
+  "deniedPages": [
+   "assembly",
+   "defects",
+   "finished",
+   "reports",
+   "master",
+   "audit"
+  ]
+ },
+ {
+  "roleId": "handoverOfficer",
+  "roleName": "مسئول تحویل به تولید",
+  "userId": "U005",
+  "unit": "انبار مواد اولیه",
+  "scope": "WH-RM → خطوط ۱ تا ۳",
+  "nav": [
+   "#/",
+   "#/handover"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "basketOperator",
+  "roleName": "اپراتور آماده‌سازی سبد",
+  "userId": "U006",
+  "unit": "تولید · آماده‌سازی",
+  "scope": "خط ۱ · ابتدای خط",
+  "nav": [
+   "#/",
+   "#/handover",
+   "#/imei",
+   "#/basket?line=L1"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "assemblyOperator",
+  "roleName": "سرپرست خط مونتاژ",
+  "userId": "U007",
+  "unit": "تولید · مونتاژ",
+  "scope": "همه خطوط · ST-01 تا ST-08",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1",
+   "#/assembly?line=L2",
+   "#/assembly?line=L3",
+   "#/stage-qc",
+   "#/defects"
+  ],
+  "deniedPages": [
+   "reports"
+  ]
+ },
+ {
+  "roleId": "stOp01",
+  "roleName": "اپراتور بدنه و فریم",
+  "userId": "U017",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-01 بدنه و فریم",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": [
+   "reports"
+  ]
+ },
+ {
+  "roleId": "stOp02",
+  "roleName": "اپراتور برد اصلی",
+  "userId": "U018",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-02 برد اصلی",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": [
+   "defects",
+   "reports"
+  ]
+ },
+ {
+  "roleId": "stOp03",
+  "roleName": "اپراتور قطعات ارتباطی",
+  "userId": "U019",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-03 قطعات ارتباطی",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "stOp04",
+  "roleName": "اپراتور دوربین",
+  "userId": "U020",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-04 دوربین",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": [
+   "shipments",
+   "inventory",
+   "defects",
+   "finished",
+   "reports",
+   "master",
+   "audit"
+  ]
+ },
+ {
+  "roleId": "stOp05",
+  "roleName": "اپراتور صدا و میکروفون",
+  "userId": "U021",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-05 صدا و میکروفون",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "stOp06",
+  "roleName": "اپراتور باتری",
+  "userId": "U022",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-06 باتری",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": [
+   "shipments",
+   "inventory",
+   "defects",
+   "finished",
+   "reports",
+   "master",
+   "audit"
+  ]
+ },
+ {
+  "roleId": "stOp07",
+  "roleName": "اپراتور نمایشگر",
+  "userId": "U023",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-07 نمایشگر",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": [
+   "shipments",
+   "defects",
+   "finished",
+   "reports",
+   "audit"
+  ]
+ },
+ {
+  "roleId": "stOp08",
+  "roleName": "اپراتور بستن و اتصالات نهایی",
+  "userId": "U024",
+  "unit": "تولید · مونتاژ",
+  "scope": "خط ۱ · ST-08 بستن و اتصالات نهایی",
+  "nav": [
+   "#/",
+   "#/assembly?line=L1"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "qcManager",
+  "roleName": "مسئول کنترل کیفیت",
+  "userId": "U008",
+  "unit": "کنترل کیفیت",
+  "scope": "همه خطوط",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/imei",
+   "#/assembly?line=L1",
+   "#/assembly?line=L2",
+   "#/assembly?line=L3",
+   "#/final-qc",
+   "#/stage-qc",
+   "#/defects",
+   "#/reports"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "defectsOfficer",
+  "roleName": "مسئول قطعات معیوب",
+  "userId": "U009",
+  "unit": "کنترل کیفیت",
+  "scope": "WH-DEF",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/defects",
+   "#/reports"
+  ],
+  "deniedPages": [
+   "assembly"
+  ]
+ },
+ {
+  "roleId": "productionManager",
+  "roleName": "مدیر تولید",
+  "userId": "U010",
+  "unit": "مدیریت تولید",
+  "scope": "همه",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/handover",
+   "#/imei",
+   "#/basket?line=L1",
+   "#/basket?line=L2",
+   "#/basket?line=L3",
+   "#/assembly?line=L1",
+   "#/assembly?line=L2",
+   "#/assembly?line=L3",
+   "#/final-qc",
+   "#/stage-qc",
+   "#/defects",
+   "#/reports"
+  ],
+  "deniedPages": [
+   "shipments",
+   "users"
+  ]
+ },
+ {
+  "roleId": "fgOfficer",
+  "roleName": "مسئول انبار محصول نهایی",
+  "userId": "U011",
+  "unit": "انبار محصول نهایی",
+  "scope": "WH-FG",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/finished"
+  ],
+  "deniedPages": []
+ },
+ {
+  "roleId": "distributionOfficer",
+  "roleName": "مسئول توزیع",
+  "userId": "U012",
+  "unit": "فروش و توزیع",
+  "scope": "همه فروشندگان",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/reports"
+  ],
+  "deniedPages": [
+   "shipments",
+   "inventory",
+   "handover",
+   "basket",
+   "assembly",
+   "stageQc",
+   "defects",
+   "master",
+   "audit"
+  ]
+ },
+ {
+  "roleId": "reportsManager",
+  "roleName": "مدیر گزارشات",
+  "userId": "U013",
+  "unit": "برنامه‌ریزی",
+  "scope": "همه",
+  "nav": [
+   "#/",
+   "#/trace",
+   "#/reports",
+   "#/audit"
+  ],
+  "deniedPages": [
+   "master"
+  ]
+ }
+]

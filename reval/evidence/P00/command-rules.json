@@ -1,0 +1,1258 @@
+{
+ "source": "static scan of minified bundle; messages with ${…} are templated",
+ "commandCount": 73,
+ "commands": [
+  {
+   "id": "CMD-001",
+   "fn": "G1",
+   "module": "master",
+   "permission": "create",
+   "label": "تعریف نوع قطعه",
+   "failures": [
+    "کد اختصاری باید ۲ تا ۴ حرف لاتین بزرگ باشد (مثلاً BAT).",
+    "کد … قبلاً تعریف شده است.",
+    "نام قطعه الزامی است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-002",
+   "fn": "K1",
+   "module": "master",
+   "permission": "edit",
+   "label": "تغییر وضعیت نوع قطعه",
+   "failures": [
+    "نوع قطعه یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-003",
+   "fn": "Z1",
+   "module": "master",
+   "permission": "create",
+   "label": "تعریف تأمین‌کننده",
+   "failures": [
+    "نام تأمین‌کننده الزامی است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-004",
+   "fn": "X1",
+   "module": "master",
+   "permission": "create",
+   "label": "تعریف قطعه (کد کالا)",
+   "failures": [
+    "نوع قطعه را انتخاب کنید.",
+    "تأمین‌کننده را انتخاب کنید.",
+    "عنوان قطعه الزامی است.",
+    "مشخصه فنی قطعه را وارد کنید (مثلاً 1020mAh · 3.7V).",
+    "کد کالا فقط حروف لاتین، عدد و خط تیره (حداکثر ۲۴ نویسه).",
+    "کد کالای … قبلاً تعریف شده است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-005",
+   "fn": "F1",
+   "module": "master",
+   "permission": "edit",
+   "label": "تغییر وضعیت کد کالا",
+   "failures": [
+    "کد کالا یافت نشد.",
+    "این قطعه در BOM فعال یک مدل استفاده شده است؛ ابتدا BOM را تغییر دهید.",
+    "برای «…» قطعه مشخصی انتخاب نشده است.",
+    "کد … از نوع «…» نیست.",
+    "قطعه … غیرفعال است.",
+    "برای «…» ایستگاهی در خط تعریف نشده است.",
+    "BOM بدون «…» قابل ثبت نیست."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-006",
+   "fn": "P1",
+   "module": "master",
+   "permission": "create",
+   "label": "تعریف گوشی جدید",
+   "failures": [
+    "نام تجاری گوشی الزامی است.",
+    "کد مدل باید ۳ تا ۱۶ نویسه لاتین یا عدد باشد (مثلاً TA-1564).",
+    "مدل … قبلاً تعریف شده است.",
+    "حداقل یک رنگ برای مدل تعریف کنید.",
+    "شناسه داخلی … تکراری است؛ کد مدل دیگری وارد کنید."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-007",
+   "fn": "W1",
+   "module": "master",
+   "permission": "edit",
+   "label": "تغییر وضعیت تأمین‌کننده",
+   "failures": [
+    "تأمین‌کننده یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-008",
+   "fn": "ey",
+   "module": "master",
+   "permission": "edit",
+   "label": "تغییر وضعیت مدل",
+   "failures": [
+    "مدل یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-009",
+   "fn": "ty",
+   "module": "master",
+   "permission": "edit",
+   "label": "ایجاد نسخه جدید BOM",
+   "failures": [
+    "مدل یافت نشد.",
+    "تغییری نسبت به نسخه فعلی BOM ایجاد نشده است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-010",
+   "fn": "ay",
+   "module": "master",
+   "permission": "settings",
+   "label": "ویرایش ایستگاه",
+   "failures": [
+    "ایستگاه یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-011",
+   "fn": "ny",
+   "module": "master",
+   "permission": "create",
+   "label": "تعریف موقعیت انبار",
+   "failures": [
+    "انبار یافت نشد.",
+    "فرمت موقعیت نامعتبر است (مثال: A-02-03-2).",
+    "موقعیت … قبلاً تعریف شده است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-012",
+   "fn": "nd",
+   "module": "shipments",
+   "permission": "create",
+   "label": "ثبت محموله",
+   "failures": [
+    "تأمین‌کننده فعال انتخاب نشده است.",
+    "شماره بارنامه یا سند حمل الزامی است.",
+    "تعداد کارتن طبق بارنامه را وارد کنید.",
+    "فقط تصویر (JPG، PNG) یا PDF بارنامه پذیرفته می‌شود.",
+    "حجم فایل بارنامه بیش از ۱٫۵ مگابایت است؛ تصویر را فشرده‌تر یا PDF کوچک‌تر بارگذاری کنید."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-013",
+   "fn": "ly",
+   "module": "shipments",
+   "permission": "create",
+   "label": "بارگذاری تصویر بارنامه",
+   "failures": [
+    "محموله یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-014",
+   "fn": "Yo",
+   "module": "shipments",
+   "permission": "scan",
+   "label": "ثبت پالت",
+   "failures": [
+    "محموله یافت نشد.",
+    "این محموله نهایی شده و پالت جدید نمی‌پذیرد.",
+    "قالب بارکد پالت نامعتبر است (PLT-سال-شماره).",
+    "بارکد تکراری پذیرفته نشد: پالت … قبلاً ثبت شده است."
+   ],
+   "statusesTouched": [
+    "receiving"
+   ]
+  },
+  {
+   "id": "CMD-015",
+   "fn": "id",
+   "module": "shipments",
+   "permission": "scan",
+   "label": "ثبت کارتن",
+   "failures": [
+    "پالت یافت نشد.",
+    "این محموله نهایی شده است.",
+    "قطعه (کد کالا) را انتخاب کنید.",
+    "قطعه … از تأمین‌کننده این محموله نیست.",
+    "نوع قطعه غیرفعال است.",
+    "تعداد قطعات کارتن باید بیشتر از صفر باشد.",
+    "قالب بارکد کارتن نامعتبر است (CTN-سال-شماره).",
+    "بارکد تکراری پذیرفته نشد: کارتن … قبلاً ثبت شده است."
+   ],
+   "statusesTouched": [
+    "receiving"
+   ]
+  },
+  {
+   "id": "CMD-016",
+   "fn": "sy",
+   "module": "shipments",
+   "permission": "edit",
+   "label": "حذف کارتن پیش از تأیید",
+   "failures": [
+    "کارتن تأییدشده قابل حذف نیست؛ برای اصلاح از ثبت مغایرت استفاده کنید."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-017",
+   "fn": "cl",
+   "module": "inventory",
+   "permission": "transfer",
+   "label": "جانمایی / جابه‌جایی پالت",
+   "failures": [
+    "پالت «…» یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-018",
+   "fn": "ld",
+   "module": "shipments",
+   "permission": "approve",
+   "label": "تأیید نهایی دریافت محموله",
+   "failures": [
+    "محموله یافت نشد.",
+    "این محموله قبلاً نهایی شده است.",
+    "حداقل یک پالت با کارتن ثبت کنید.",
+    "پالت … کارتنی ندارد.",
+    "پالت … هنوز جانمایی نشده است.",
+    "تعداد کارتن ثبت‌شده (…) با بارنامه (…) مغایرت دارد؛ نوع مغایرت را تعیین کنید."
+   ],
+   "statusesTouched": [
+    "receiving",
+    "discrepancy",
+    "approved"
+   ]
+  },
+  {
+   "id": "CMD-019",
+   "fn": "oy",
+   "module": "shipments",
+   "permission": "approve",
+   "label": "تعیین تکلیف مغایرت دریافت",
+   "failures": [
+    "محموله یافت نشد.",
+    "مغایرت بازی برای این محموله وجود ندارد.",
+    "شرح تعیین تکلیف الزامی است."
+   ],
+   "statusesTouched": [
+    "approved"
+   ]
+  },
+  {
+   "id": "CMD-020",
+   "fn": "sd",
+   "module": "inventory",
+   "permission": "transfer",
+   "label": "جابه‌جایی کارتن",
+   "failures": [
+    "فقط کارتن‌های داخل انبار قابل جابه‌جایی بین موقعیت‌ها هستند.",
+    "کارتن هم‌اکنون در همین موقعیت است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-021",
+   "fn": "od",
+   "module": "inventory",
+   "permission": "edit",
+   "label": "اصلاح موجودی کارتن",
+   "failures": [
+    "مقدار اصلاح را وارد کنید.",
+    "علت اصلاح موجودی الزامی است.",
+    "موجودی منفی مجاز نیست (موجودی فعلی …)."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-022",
+   "fn": "jo",
+   "module": "handover",
+   "permission": "create",
+   "label": "ثبت درخواست قطعه",
+   "failures": [
+    "مدل فعال انتخاب نشده است.",
+    "تعداد گوشی برنامه‌ریزی‌شده را وارد کنید."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-023",
+   "fn": "rd",
+   "module": "handover",
+   "permission": "transfer",
+   "label": "صدور حواله تحویل به تولید",
+   "failures": [
+    "درخواست یافت نشد.",
+    "برای این درخواست قبلاً حواله صادر شده است.",
+    "هیچ کارتنی اسکن نشده است.",
+    "کارتن … در انبار مواد اولیه قابل تحویل نیست (…).",
+    "کارتن … خالی است."
+   ],
+   "statusesTouched": [
+    "open",
+    "issued"
+   ]
+  },
+  {
+   "id": "CMD-024",
+   "fn": "cd",
+   "module": "handover",
+   "permission": "approve",
+   "label": "تأیید دریافت در خط تولید",
+   "failures": [
+    "حواله یافت نشد.",
+    "این حواله در انتظار تأیید نیست.",
+    "تحویل‌دهنده نمی‌تواند دریافت را تأیید کند."
+   ],
+   "statusesTouched": [
+    "issued",
+    "received"
+   ]
+  },
+  {
+   "id": "CMD-025",
+   "fn": "ry",
+   "module": "handover",
+   "permission": "reject",
+   "label": "ثبت مغایرت تحویل",
+   "failures": [
+    "حواله یافت نشد.",
+    "این حواله در انتظار تأیید نیست.",
+    "شرح مغایرت الزامی است."
+   ],
+   "statusesTouched": [
+    "issued",
+    "discrepancy",
+    "partial"
+   ]
+  },
+  {
+   "id": "CMD-026",
+   "fn": "bs",
+   "module": "imei",
+   "permission": "create",
+   "label": "بارگذاری فهرست IMEI مجاز",
+   "failures": [
+    "هیچ شناسه‌ای در ورودی پیدا نشد.",
+    "هیچ ردیف معتبری افزوده نشد. نامعتبر: … · تکراری: …"
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-027",
+   "fn": "vs",
+   "module": "imei",
+   "permission": "create",
+   "label": "ثبت دستور تولید",
+   "failures": [
+    "مدل فعال انتخاب نشده است.",
+    "تعداد را وارد کنید."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-028",
+   "fn": "ys",
+   "module": "imei",
+   "permission": "approve",
+   "label": "فعال‌سازی در سامانه همتا",
+   "failures": [
+    "IMEI یافت نشد.",
+    "این گوشی قبلاً در همتا فعال شده است (…).",
+    "فقط گوشی‌ای که QC نهایی را گذرانده قابل ثبت در همتا است."
+   ],
+   "statusesTouched": [
+    "activated",
+    "pending",
+    "error"
+   ]
+  },
+  {
+   "id": "CMD-029",
+   "fn": "uy",
+   "module": "imei",
+   "permission": "approve",
+   "label": "فعال‌سازی گروهی در سامانه همتا",
+   "failures": [
+    "گوشی آماده ثبت در همتا انتخاب نشده است."
+   ],
+   "statusesTouched": [
+    "pending",
+    "error",
+    "activated"
+   ]
+  },
+  {
+   "id": "CMD-030",
+   "fn": "dd",
+   "module": "imei",
+   "permission": "reject",
+   "label": "ثبت خطای IMEI",
+   "failures": [
+    "IMEI یافت نشد."
+   ],
+   "statusesTouched": [
+    "error"
+   ]
+  },
+  {
+   "id": "CMD-031",
+   "fn": "ud",
+   "module": "basket",
+   "permission": "create",
+   "label": "آماده‌سازی گوشی جدید و تخصیص IMEI",
+   "failures": [
+    "دستور تولید فعال انتخاب نشده است.",
+    "IMEI آزاد برای … وجود ندارد. ابتدا فهرست IMEI مجاز این مدل را بارگذاری کنید."
+   ],
+   "statusesTouched": [
+    "active",
+    "free",
+    "allocated"
+   ]
+  },
+  {
+   "id": "CMD-032",
+   "fn": "pd",
+   "module": "basket",
+   "permission": "create",
+   "label": "چاپ برچسب IMEI گوشی",
+   "failures": [],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-033",
+   "fn": "md",
+   "module": "basket",
+   "permission": "scan",
+   "label": "تأیید اسکن IMEI",
+   "failures": [
+    "IMEI این گوشی قبلاً تأیید شده است.",
+    "ابتدا برچسب IMEI را چاپ کنید و روی سبد بچسبانید، سپس همان برچسب را اسکن کنید.",
+    "IMEI اسکن‌شده با شناسه تخصیص‌یافته به این گوشی مطابقت ندارد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-034",
+   "fn": "fd",
+   "module": "basket",
+   "permission": "create",
+   "label": "تولید و چاپ برچسب قطعه",
+   "failures": [
+    "ابتدا IMEI را تأیید کنید."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-035",
+   "fn": "gd",
+   "module": "basket",
+   "permission": "scan",
+   "label": "اسکن و اختصاص قطعه به سبد",
+   "failures": [
+    "این سبد دیگر در حال آماده‌سازی نیست.",
+    "ابتدا IMEI را با اسکن تأیید کنید.",
+    "ردیف قطعه نامعتبر است.",
+    "بارکدی خوانده نشد.",
+    "اسکن تکراری: … قبلاً ثبت شده است؛ موجودی دوباره کم نشد.",
+    "«…» قبلاً در سبد ثبت شده است.",
+    "بارکد خوانده‌شده در سامانه ثبت نشده است.",
+    "نوع قطعه اشتباه: بارکد مربوط به «…» است؛ قطعه مورد انتظار «…» است.",
+    "این برچسب مربوط به ردیف دیگری است؛ برچسب مورد انتظار … است.",
+    "برچسب این قطعه هنوز تولید و چاپ نشده است."
+   ],
+   "statusesTouched": [
+    "preparing"
+   ]
+  },
+  {
+   "id": "CMD-036",
+   "fn": "ks",
+   "module": "basket",
+   "permission": "approve",
+   "label": "تأیید تکمیل سبد",
+   "failures": [
+    "سبد در وضعیت آماده‌سازی نیست.",
+    "سبد ناقص است؛ … قطعه ثبت نشده: …"
+   ],
+   "statusesTouched": [
+    "preparing",
+    "ready",
+    "basket_ready"
+   ]
+  },
+  {
+   "id": "CMD-037",
+   "fn": "Go",
+   "module": "basket",
+   "permission": "transfer",
+   "label": "تحویل سبد به مونتاژ",
+   "failures": [
+    "فقط سبد تکمیل‌شده قابل تحویل به مونتاژ است."
+   ],
+   "statusesTouched": [
+    "ready",
+    "delivered",
+    "basket_delivered"
+   ]
+  },
+  {
+   "id": "CMD-038",
+   "fn": "hd",
+   "module": "assembly",
+   "permission": "approve",
+   "label": "تأیید دریافت سبد در مونتاژ",
+   "failures": [
+    "این سبد در انتظار دریافت نیست."
+   ],
+   "statusesTouched": [
+    "delivered",
+    "received",
+    "awaiting_assembly"
+   ]
+  },
+  {
+   "id": "CMD-039",
+   "fn": "bd",
+   "module": "assembly",
+   "permission": "scan",
+   "label": "ورود گوشی به ایستگاه",
+   "failures": [
+    "ایستگاه انتخاب نشده است.",
+    "این گوشی مربوط به مدل دیگری است.",
+    "این گوشی برای اصلاح به ایستگاه «…» ارجاع شده است.",
+    "این گوشی در انتظار تصمیم مسئول فنی است.",
+    "گوشی در وضعیت قابل مونتاژ نیست (…).",
+    "این گوشی در مرحله «…» است، نه «…».",
+    "گوشی هم‌اکنون در همین ایستگاه است."
+   ],
+   "statusesTouched": [
+    "final_qc_failed",
+    "in_assembly",
+    "technical_review"
+   ]
+  },
+  {
+   "id": "CMD-040",
+   "fn": "vd",
+   "module": "assembly",
+   "permission": "scan",
+   "label": "اسکن و نصب قطعه",
+   "failures": [
+    "گوشی در مرحله نصب قطعه نیست.",
+    "بارکد قطعه در پرونده این گوشی ثبت نشده است.",
+    "«…» مربوط به ایستگاه «…» نیست.",
+    "اسکن تکراری: … قبلاً نصب شده است.",
+    "این قطعه قابل نصب نیست (معیوب یا خارج‌شده)."
+   ],
+   "statusesTouched": [
+    "installed",
+    "in_basket"
+   ]
+  },
+  {
+   "id": "CMD-041",
+   "fn": "yd",
+   "module": "assembly",
+   "permission": "create",
+   "label": "ثبت تکمیل مونتاژ مرحله",
+   "failures": [
+    "گوشی در مرحله مونتاژ نیست.",
+    "… قطعه این مرحله هنوز اسکن و نصب نشده است.",
+    "پرسش کیفی تأیید نشده: «…». تا رفع مشکل، مرحله قابل تکمیل نیست.",
+    "برای ثبت تکمیل، شناسه همین گوشی را دوباره اسکن کنید."
+   ],
+   "statusesTouched": [
+    "installed"
+   ]
+  },
+  {
+   "id": "CMD-042",
+   "fn": "kd",
+   "module": "stageQc",
+   "permission": "create",
+   "label": "ثبت نتیجه تست مرحله‌ای",
+   "failures": [
+    "گوشی در مرحله کنترل کیفیت ایستگاه نیست.",
+    "این تست برای ایستگاه تعریف نشده است."
+   ],
+   "statusesTouched": [
+    "in_assembly"
+   ]
+  },
+  {
+   "id": "CMD-043",
+   "fn": "xd",
+   "module": "assembly",
+   "permission": "approve",
+   "label": "تأیید مرحله و انتقال به ایستگاه بعد",
+   "failures": [
+    "مرحله هنوز به کنترل کیفیت نرسیده است.",
+    "نتیجه … تست ثبت نشده است.",
+    "تست مردود یا نیازمند بررسی را نمی‌توان به‌عنوان تأییدشده ثبت کرد."
+   ],
+   "statusesTouched": [
+    "awaiting_final_qc"
+   ]
+  },
+  {
+   "id": "CMD-044",
+   "fn": "Sd",
+   "module": "defects",
+   "permission": "create",
+   "label": "ثبت پرونده خرابی",
+   "failures": [
+    "ثبت عیب فقط پس از تست مرحله امکان‌پذیر است.",
+    "ابتدا نتیجه تست ناموفق را ثبت کنید.",
+    "قطعه معیوب انتخاب نشده است.",
+    "فقط قطعه نصب‌شده قابل اعلام معیوب است.",
+    "نوع عیب را مشخص کنید."
+   ],
+   "statusesTouched": [
+    "installed",
+    "defective",
+    "technical_review"
+   ]
+  },
+  {
+   "id": "CMD-045",
+   "fn": "Nd",
+   "module": "assembly",
+   "permission": "scan",
+   "label": "نصب قطعه جایگزین",
+   "failures": [
+    "گوشی در مرحله تعویض قطعه نیست.",
+    "پرونده خرابی باز برای تعویض یافت نشد.",
+    "شناسه جدید نباید با شناسه قطعه معیوب یکسان باشد.",
+    "اسکن تکراری: … قبلاً ثبت شده است.",
+    "برچسب مورد انتظار برای قطعه جایگزین … است.",
+    "برچسب قطعه جایگزین هنوز چاپ نشده است."
+   ],
+   "statusesTouched": [
+    "replacing",
+    "replaced"
+   ]
+  },
+  {
+   "id": "CMD-046",
+   "fn": "wd",
+   "module": "assembly",
+   "permission": "create",
+   "label": "چاپ برچسب قطعه جایگزین",
+   "failures": [
+    "پرونده خرابی باز وجود ندارد."
+   ],
+   "statusesTouched": [
+    "replacing"
+   ]
+  },
+  {
+   "id": "CMD-047",
+   "fn": "py",
+   "module": "stageQc",
+   "permission": "create",
+   "label": "ارجاع به مسئول فنی",
+   "failures": [
+    "ابتدا نتیجه «نیازمند بررسی» را ثبت کنید."
+   ],
+   "statusesTouched": [
+    "technical_review"
+   ]
+  },
+  {
+   "id": "CMD-048",
+   "fn": "Ad",
+   "module": "stageQc",
+   "permission": "approve",
+   "label": "تصمیم مسئول فنی",
+   "failures": [
+    "این گوشی در انتظار بررسی فنی نیست.",
+    "شرح تصمیم الزامی است."
+   ],
+   "statusesTouched": [
+    "technical_review",
+    "in_assembly",
+    "escalated",
+    "replacing"
+   ]
+  },
+  {
+   "id": "CMD-049",
+   "fn": "xs",
+   "module": "finalQc",
+   "permission": "create",
+   "label": "ثبت نتیجه تست نهایی",
+   "failures": [
+    "گوشی در صف کنترل کیفیت نهایی نیست."
+   ],
+   "statusesTouched": [
+    "awaiting_final_qc"
+   ]
+  },
+  {
+   "id": "CMD-050",
+   "fn": "Td",
+   "module": "finalQc",
+   "permission": "reject",
+   "label": "مردودی در QC نهایی و ارجاع برای اصلاح",
+   "failures": [
+    "گوشی در صف QC نهایی نیست.",
+    "ابتدا تست ناموفق را ثبت کنید.",
+    "ایستگاه اصلاح را انتخاب کنید."
+   ],
+   "statusesTouched": [
+    "awaiting_final_qc",
+    "final_qc_failed"
+   ]
+  },
+  {
+   "id": "CMD-051",
+   "fn": "Id",
+   "module": "finalQc",
+   "permission": "approve",
+   "label": "تأیید کیفیت نهایی و تکمیل تولید",
+   "failures": [
+    "گوشی در صف QC نهایی نیست.",
+    "پیش‌نیاز برقرار نیست: …",
+    "همه تست‌های چک‌لیست نهایی باید «قبول» باشند.",
+    "بارکد اسکن‌شده با IMEI پرونده تولید مطابقت ندارد."
+   ],
+   "statusesTouched": [
+    "awaiting_final_qc",
+    "completed",
+    "confirmed",
+    "pending",
+    "installed",
+    "replacing",
+    "escalated",
+    "defective"
+   ]
+  },
+  {
+   "id": "CMD-052",
+   "fn": "Cd",
+   "module": "defects",
+   "permission": "scan",
+   "label": "دریافت قطعه در انبار معیوبی",
+   "failures": [
+    "بارکد قطعه در سامانه یافت نشد."
+   ],
+   "statusesTouched": [
+    "defective",
+    "in_defect_store",
+    "escalated",
+    "in_store"
+   ]
+  },
+  {
+   "id": "CMD-053",
+   "fn": "Md",
+   "module": "defects",
+   "permission": "create",
+   "label": "ایجاد سند مرجوعی",
+   "failures": [
+    "هیچ قطعه‌ای انتخاب نشده است.",
+    "قطعه … یافت نشد.",
+    "قطعه … در انبار معیوبی نیست.",
+    "قطعه … قبلاً در سند … است.",
+    "قطعه … متعلق به تأمین‌کننده دیگری است."
+   ],
+   "statusesTouched": [
+    "in_defect_store"
+   ]
+  },
+  {
+   "id": "CMD-054",
+   "fn": "Ko",
+   "module": "defects",
+   "permission": "transfer",
+   "label": "پیشبرد وضعیت مرجوعی",
+   "failures": [
+    "سند مرجوعی یافت نشد.",
+    "این سند بسته شده است.",
+    "تأیید مرجوعی فقط توسط مسئول مجاز امکان‌پذیر است."
+   ],
+   "statusesTouched": [
+    "returned"
+   ]
+  },
+  {
+   "id": "CMD-055",
+   "fn": "zd",
+   "module": "finalQc",
+   "permission": "create",
+   "label": "چاپ برچسب جعبه گوشی (IMEI1/IMEI2)",
+   "failures": [
+    "برچسب جعبه فقط برای گوشی تأییدشده در QC نهایی چاپ می‌شود."
+   ],
+   "statusesTouched": [
+    "completed"
+   ]
+  },
+  {
+   "id": "CMD-056",
+   "fn": "Ed",
+   "module": "finalQc",
+   "permission": "approve",
+   "label": "بسته‌بندی گوشی و تأیید برچسب جعبه",
+   "failures": [
+    "این گوشی قبلاً بسته‌بندی شده است.",
+    "فقط گوشی تأییدشده در QC نهایی قابل بسته‌بندی است.",
+    "مورد بسته‌بندی تأیید نشده: «…».",
+    "برچسب IMEI1/IMEI2 جعبه هنوز چاپ نشده است.",
+    "بارکد اسکن‌شده از روی جعبه با IMEI این گوشی مطابقت ندارد؛ برچسب را بررسی کنید."
+   ],
+   "statusesTouched": [
+    "packed",
+    "completed"
+   ]
+  },
+  {
+   "id": "CMD-057",
+   "fn": "Bd",
+   "module": "finished",
+   "permission": "create",
+   "label": "ایجاد کارتن ۹تایی محصول",
+   "failures": [
+    "مدل را انتخاب کنید.",
+    "رنگ را انتخاب کنید.",
+    "کارتن محصول «…» یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-058",
+   "fn": "Dd",
+   "module": "finished",
+   "permission": "scan",
+   "label": "اسکن جعبه گوشی در کارتن ۹تایی",
+   "failures": [
+    "این کارتن بسته شده است.",
+    "کارتن پر است (… عدد).",
+    "این گوشی قبلاً در کارتن … ثبت شده است.",
+    "مدل این گوشی (…) با کارتن (…) یکی نیست.",
+    "رنگ گوشی (…) با رنگ کارتن (…) یکی نیست."
+   ],
+   "statusesTouched": [
+    "open",
+    "packed",
+    "completed",
+    "in_carton"
+   ]
+  },
+  {
+   "id": "CMD-059",
+   "fn": "my",
+   "module": "finished",
+   "permission": "edit",
+   "label": "خارج‌کردن گوشی از کارتن باز",
+   "failures": [
+    "فقط از کارتن باز می‌توان گوشی خارج کرد.",
+    "این گوشی در این کارتن نیست."
+   ],
+   "statusesTouched": [
+    "open",
+    "packed"
+   ]
+  },
+  {
+   "id": "CMD-060",
+   "fn": "_d",
+   "module": "finished",
+   "permission": "create",
+   "label": "چاپ برچسب کارتن محصول",
+   "failures": [
+    "برچسب پس از تکمیل … گوشی چاپ می‌شود (فعلاً …)."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-061",
+   "fn": "Od",
+   "module": "finished",
+   "permission": "approve",
+   "label": "بستن کارتن محصول",
+   "failures": [
+    "این کارتن قبلاً بسته شده است.",
+    "کارتن باید دقیقاً … گوشی داشته باشد (فعلاً …).",
+    "ابتدا برچسب بارکد کارتن را چاپ کنید.",
+    "بارکد اسکن‌شده با برچسب این کارتن مطابقت ندارد."
+   ],
+   "statusesTouched": [
+    "open",
+    "closed"
+   ]
+  },
+  {
+   "id": "CMD-062",
+   "fn": "Fo",
+   "module": "finished",
+   "permission": "transfer",
+   "label": "جانمایی کارتن در انبار محصول",
+   "failures": [
+    "کارتن هنوز بسته نشده است.",
+    "… مخصوص … است؛ این کارتن … است.",
+    "کارتن هم‌اکنون در همین موقعیت است."
+   ],
+   "statusesTouched": [
+    "open",
+    "closed",
+    "placed",
+    "in_carton",
+    "in_stock"
+   ]
+  },
+  {
+   "id": "CMD-063",
+   "fn": "kw",
+   "module": "distribution",
+   "permission": "create",
+   "label": "تعریف فروشنده",
+   "failures": [
+    "نام فروشنده الزامی است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-064",
+   "fn": "xw",
+   "module": "distribution",
+   "permission": "edit",
+   "label": "تغییر وضعیت فروشنده",
+   "failures": [
+    "فروشنده یافت نشد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-065",
+   "fn": "ff",
+   "module": "distribution",
+   "permission": "create",
+   "label": "ثبت درخواست توزیع",
+   "failures": [
+    "فروشنده فعال انتخاب نشده است.",
+    "تعداد درخواست را وارد کنید."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-066",
+   "fn": "fy",
+   "module": "distribution",
+   "permission": "transfer",
+   "label": "تخصیص قطعی گوشی به سفارش",
+   "failures": [
+    "سفارش یافت نشد.",
+    "تخصیص این سفارش قبلاً انجام شده است.",
+    "باید دقیقاً … گوشی انتخاب شود.",
+    "گوشی … قبلاً به سفارش … تخصیص یافته است.",
+    "گوشی … موجود و قابل فروش نیست.",
+    "مدل گوشی … با سفارش مطابقت ندارد."
+   ],
+   "statusesTouched": [
+    "requested",
+    "in_stock",
+    "allocated"
+   ]
+  },
+  {
+   "id": "CMD-067",
+   "fn": "gf",
+   "module": "distribution",
+   "permission": "scan",
+   "label": "اسکن خروج گوشی",
+   "failures": [
+    "سفارش یافت نشد.",
+    "سفارش در وضعیت آماده خروج نیست.",
+    "هیچ گوشی از کارتن … در این سفارش باقی نمانده است.",
+    "گوشی … به این سفارش تخصیص ندارد؛ خروج مسدود شد.",
+    "اسکن تکراری: خروج این گوشی قبلاً ثبت شده است."
+   ],
+   "statusesTouched": [
+    "allocated",
+    "shipped"
+   ]
+  },
+  {
+   "id": "CMD-068",
+   "fn": "gy",
+   "module": "distribution",
+   "permission": "approve",
+   "label": "تأیید تحویل به فروشنده",
+   "failures": [
+    "سفارش یافت نشد.",
+    "سفارش هنوز ارسال نشده است.",
+    "نام تحویل‌گیرنده الزامی است."
+   ],
+   "statusesTouched": [
+    "shipped",
+    "delivered"
+   ]
+  },
+  {
+   "id": "CMD-069",
+   "fn": "hy",
+   "module": "users",
+   "permission": "users",
+   "label": "ایجاد کاربر",
+   "failures": [
+    "نام و نام کاربری الزامی است.",
+    "نام کاربری باید لاتین و حداقل ۳ کاراکتر باشد.",
+    "این نام کاربری قبلاً استفاده شده است.",
+    "نقش انتخاب نشده است."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-070",
+   "fn": "by",
+   "module": "users",
+   "permission": "users",
+   "label": "ویرایش کاربر",
+   "failures": [
+    "کاربر یافت نشد.",
+    "نقش حساب جاری را نمی‌توان از همین حساب تغییر داد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-071",
+   "fn": "vy",
+   "module": "users",
+   "permission": "users",
+   "label": "فعال/غیرفعال‌سازی حساب",
+   "failures": [
+    "کاربر یافت نشد.",
+    "حساب جاری را نمی‌توان غیرفعال کرد."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-072",
+   "fn": "yy",
+   "module": "users",
+   "permission": "users",
+   "label": "تغییر مجوز نقش",
+   "failures": [
+    "نقش یافت نشد.",
+    "مجوزهای نقش سوپر ادمین قابل تغییر نیست."
+   ],
+   "statusesTouched": []
+  },
+  {
+   "id": "CMD-073",
+   "fn": "ky",
+   "module": "users",
+   "permission": "users",
+   "label": "تعریف نقش جدید",
+   "failures": [
+    "نام نقش الزامی است.",
+    "نقشی با این نام وجود دارد."
+   ],
+   "statusesTouched": []
+  }
+ ],
+ "printLabelTemplates": [
+  "part",
+  "imei",
+  "box",
+  "master",
+  "logistic"
+ ],
+ "reportExports": [
+  {
+   "title": "خلاصه داشبورد",
+   "module": "reports",
+   "columns": [
+    "شاخص",
+    "مقدار",
+    "توضیح"
+   ]
+  },
+  {
+   "title": "گزارش اطلاعات پایه · قطعات",
+   "module": "master",
+   "columns": [
+    "کد کالا",
+    "نوع",
+    "عنوان",
+    "مشخصه فنی",
+    "تأمین‌کننده",
+    "وضعیت"
+   ]
+  },
+  {
+   "title": "گزارش محموله‌های ورودی",
+   "module": "shipments",
+   "columns": [
+    "شماره",
+    "تأمین‌کننده",
+    "تاریخ",
+    "بارنامه",
+    "پالت",
+    "کارتن",
+    "قطعات",
+    "وضعیت"
+   ]
+  },
+  {
+   "title": "گزارش موجودی کارتن‌ها",
+   "module": "inventory",
+   "columns": [
+    "کارتن",
+    "پالت",
+    "قطعه",
+    "تأمین‌کننده",
+    "محل",
+    "اولیه",
+    "اختصاص‌یافته",
+    "معیوب/قرنطینه",
+    "برگشتی",
+    "باقی‌مانده"
+   ]
+  },
+  {
+   "title": "گزارش حواله‌های تحویل به تولید",
+   "module": "handover",
+   "columns": [
+    "حواله",
+    "درخواست",
+    "کارتن‌ها",
+    "قطعات",
+    "تحویل‌دهنده",
+    "زمان",
+    "دریافت‌کننده",
+    "وضعیت"
+   ]
+  },
+  {
+   "title": "گزارش وضعیت IMEI",
+   "module": "imei",
+   "columns": [
+    "IMEI1",
+    "IMEI2",
+    "مدل",
+    "وضعیت",
+    "گوشی",
+    "کد رهگیری همتا"
+   ]
+  },
+  {
+   "title": "گزارش وضعیت گوشی‌ها در ایستگاه‌ها",
+   "module": "assembly",
+   "columns": [
+    "ایستگاه",
+    "IMEI",
+    "وضعیت",
+    "مرحله",
+    "تلاش"
+   ]
+  },
+  {
+   "title": "گزارش نتایج تست مرحله‌ای",
+   "module": "stageQc",
+   "columns": [
+    "زمان",
+    "IMEI",
+    "ایستگاه",
+    "تست",
+    "قطعه",
+    "نتیجه",
+    "تلاش",
+    "کاربر"
+   ]
+  },
+  {
+   "title": "گزارش قطعات معیوب",
+   "module": "defects",
+   "columns": [
+    "پرونده",
+    "IMEI",
+    "قطعه",
+    "نوع",
+    "ایستگاه",
+    "عیب",
+    "تأمین‌کننده",
+    "وضعیت",
+    "زمان"
+   ]
+  },
+  {
+   "title": "گزارش کیفیت نهایی و بسته‌بندی",
+   "module": "finalQc",
+   "columns": [
+    "IMEI1",
+    "IMEI2",
+    "مدل",
+    "تأیید QC",
+    "تأییدکننده",
+    "بسته‌بندی"
+   ]
+  },
+  {
+   "title": "گزارش موجودی انبار محصول نهایی",
+   "module": "finished",
+   "columns": [
+    "کارتن",
+    "مدل",
+    "رنگ",
+    "موجود",
+    "محل",
+    "جانمایی"
+   ]
+  },
+  {
+   "title": "فهرست کاربران و نقش‌ها",
+   "module": "users",
+   "columns": [
+    "نام",
+    "نام کاربری",
+    "واحد",
+    "نقش",
+    "محدودیت",
+    "وضعیت"
+   ]
+  },
+  {
+   "title": "گزارش ممیزی",
+   "module": "audit",
+   "columns": [
+    "زمان",
+    "کاربر",
+    "نقش",
+    "بخش",
+    "عملیات",
+    "رکورد",
+    "قبلی",
+    "جدید",
+    "نتیجه"
+   ]
+  }
+ ]
+}

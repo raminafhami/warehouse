@@ -1,0 +1,461 @@
+{
+  "preparedAt": "2026-11-08",
+  "inspection": "static only; not runtime or visual verification",
+  "hash": "C8192697F27300A1756813E251AB7D0F7D932A81E12A56BF14980B1CB3229901",
+  "operations": [
+    {
+      "module": "master",
+      "permission": "create",
+      "label": "تعریف نوع قطعه"
+    },
+    {
+      "module": "master",
+      "permission": "edit",
+      "label": "تغییر وضعیت نوع قطعه"
+    },
+    {
+      "module": "master",
+      "permission": "create",
+      "label": "تعریف تأمین‌کننده"
+    },
+    {
+      "module": "master",
+      "permission": "create",
+      "label": "تعریف قطعه (کد کالا)"
+    },
+    {
+      "module": "master",
+      "permission": "edit",
+      "label": "تغییر وضعیت کد کالا"
+    },
+    {
+      "module": "master",
+      "permission": "create",
+      "label": "تعریف گوشی جدید"
+    },
+    {
+      "module": "master",
+      "permission": "edit",
+      "label": "تغییر وضعیت تأمین‌کننده"
+    },
+    {
+      "module": "master",
+      "permission": "edit",
+      "label": "تغییر وضعیت مدل"
+    },
+    {
+      "module": "master",
+      "permission": "edit",
+      "label": "ایجاد نسخه جدید BOM"
+    },
+    {
+      "module": "master",
+      "permission": "settings",
+      "label": "ویرایش ایستگاه"
+    },
+    {
+      "module": "master",
+      "permission": "create",
+      "label": "تعریف موقعیت انبار"
+    },
+    {
+      "module": "shipments",
+      "permission": "create",
+      "label": "ثبت محموله"
+    },
+    {
+      "module": "shipments",
+      "permission": "create",
+      "label": "بارگذاری تصویر بارنامه"
+    },
+    {
+      "module": "shipments",
+      "permission": "scan",
+      "label": "ثبت پالت"
+    },
+    {
+      "module": "shipments",
+      "permission": "scan",
+      "label": "ثبت کارتن"
+    },
+    {
+      "module": "shipments",
+      "permission": "edit",
+      "label": "حذف کارتن پیش از تأیید"
+    },
+    {
+      "module": "inventory",
+      "permission": "transfer",
+      "label": "جانمایی / جابه‌جایی پالت"
+    },
+    {
+      "module": "shipments",
+      "permission": "approve",
+      "label": "تأیید نهایی دریافت محموله"
+    },
+    {
+      "module": "shipments",
+      "permission": "approve",
+      "label": "تعیین تکلیف مغایرت دریافت"
+    },
+    {
+      "module": "inventory",
+      "permission": "transfer",
+      "label": "جابه‌جایی کارتن"
+    },
+    {
+      "module": "inventory",
+      "permission": "edit",
+      "label": "اصلاح موجودی کارتن"
+    },
+    {
+      "module": "handover",
+      "permission": "create",
+      "label": "ثبت درخواست قطعه"
+    },
+    {
+      "module": "handover",
+      "permission": "transfer",
+      "label": "صدور حواله تحویل به تولید"
+    },
+    {
+      "module": "handover",
+      "permission": "approve",
+      "label": "تأیید دریافت در خط تولید"
+    },
+    {
+      "module": "handover",
+      "permission": "reject",
+      "label": "ثبت مغایرت تحویل"
+    },
+    {
+      "module": "imei",
+      "permission": "create",
+      "label": "بارگذاری فهرست IMEI مجاز"
+    },
+    {
+      "module": "imei",
+      "permission": "create",
+      "label": "ثبت دستور تولید"
+    },
+    {
+      "module": "imei",
+      "permission": "approve",
+      "label": "فعال‌سازی در سامانه همتا"
+    },
+    {
+      "module": "imei",
+      "permission": "approve",
+      "label": "فعال‌سازی گروهی در سامانه همتا"
+    },
+    {
+      "module": "imei",
+      "permission": "reject",
+      "label": "ثبت خطای IMEI"
+    },
+    {
+      "module": "basket",
+      "permission": "create",
+      "label": "آماده‌سازی گوشی جدید و تخصیص IMEI"
+    },
+    {
+      "module": "basket",
+      "permission": "create",
+      "label": "چاپ برچسب IMEI گوشی"
+    },
+    {
+      "module": "basket",
+      "permission": "scan",
+      "label": "تأیید اسکن IMEI"
+    },
+    {
+      "module": "basket",
+      "permission": "create",
+      "label": "تولید و چاپ برچسب قطعه"
+    },
+    {
+      "module": "basket",
+      "permission": "scan",
+      "label": "اسکن و اختصاص قطعه به سبد"
+    },
+    {
+      "module": "basket",
+      "permission": "approve",
+      "label": "تأیید تکمیل سبد"
+    },
+    {
+      "module": "basket",
+      "permission": "transfer",
+      "label": "تحویل سبد به مونتاژ"
+    },
+    {
+      "module": "assembly",
+      "permission": "approve",
+      "label": "تأیید دریافت سبد در مونتاژ"
+    },
+    {
+      "module": "assembly",
+      "permission": "scan",
+      "label": "ورود گوشی به ایستگاه"
+    },
+    {
+      "module": "assembly",
+      "permission": "scan",
+      "label": "اسکن و نصب قطعه"
+    },
+    {
+      "module": "assembly",
+      "permission": "create",
+      "label": "ثبت تکمیل مونتاژ مرحله"
+    },
+    {
+      "module": "stageQc",
+      "permission": "create",
+      "label": "ثبت نتیجه تست مرحله‌ای"
+    },
+    {
+      "module": "assembly",
+      "permission": "approve",
+      "label": "تأیید مرحله و انتقال به ایستگاه بعد"
+    },
+    {
+      "module": "defects",
+      "permission": "create",
+      "label": "ثبت پرونده خرابی"
+    },
+    {
+      "module": "assembly",
+      "permission": "scan",
+      "label": "نصب قطعه جایگزین"
+    },
+    {
+      "module": "assembly",
+      "permission": "create",
+      "label": "چاپ برچسب قطعه جایگزین"
+    },
+    {
+      "module": "stageQc",
+      "permission": "create",
+      "label": "ارجاع به مسئول فنی"
+    },
+    {
+      "module": "stageQc",
+      "permission": "approve",
+      "label": "تصمیم مسئول فنی"
+    },
+    {
+      "module": "finalQc",
+      "permission": "create",
+      "label": "ثبت نتیجه تست نهایی"
+    },
+    {
+      "module": "finalQc",
+      "permission": "reject",
+      "label": "مردودی در QC نهایی و ارجاع برای اصلاح"
+    },
+    {
+      "module": "finalQc",
+      "permission": "approve",
+      "label": "تأیید کیفیت نهایی و تکمیل تولید"
+    },
+    {
+      "module": "defects",
+      "permission": "scan",
+      "label": "دریافت قطعه در انبار معیوبی"
+    },
+    {
+      "module": "defects",
+      "permission": "create",
+      "label": "ایجاد سند مرجوعی"
+    },
+    {
+      "module": "defects",
+      "permission": "transfer",
+      "label": "پیشبرد وضعیت مرجوعی"
+    },
+    {
+      "module": "finalQc",
+      "permission": "create",
+      "label": "چاپ برچسب جعبه گوشی (IMEI1/IMEI2)"
+    },
+    {
+      "module": "finalQc",
+      "permission": "approve",
+      "label": "بسته‌بندی گوشی و تأیید برچسب جعبه"
+    },
+    {
+      "module": "finished",
+      "permission": "create",
+      "label": "ایجاد کارتن ۹تایی محصول"
+    },
+    {
+      "module": "finished",
+      "permission": "scan",
+      "label": "اسکن جعبه گوشی در کارتن ۹تایی"
+    },
+    {
+      "module": "finished",
+      "permission": "edit",
+      "label": "خارج‌کردن گوشی از کارتن باز"
+    },
+    {
+      "module": "finished",
+      "permission": "create",
+      "label": "چاپ برچسب کارتن محصول"
+    },
+    {
+      "module": "finished",
+      "permission": "approve",
+      "label": "بستن کارتن محصول"
+    },
+    {
+      "module": "finished",
+      "permission": "transfer",
+      "label": "جانمایی کارتن در انبار محصول"
+    },
+    {
+      "module": "distribution",
+      "permission": "create",
+      "label": "تعریف فروشنده"
+    },
+    {
+      "module": "distribution",
+      "permission": "edit",
+      "label": "تغییر وضعیت فروشنده"
+    },
+    {
+      "module": "distribution",
+      "permission": "create",
+      "label": "ثبت درخواست توزیع"
+    },
+    {
+      "module": "distribution",
+      "permission": "transfer",
+      "label": "تخصیص قطعی گوشی به سفارش"
+    },
+    {
+      "module": "distribution",
+      "permission": "scan",
+      "label": "اسکن خروج گوشی"
+    },
+    {
+      "module": "distribution",
+      "permission": "approve",
+      "label": "تأیید تحویل به فروشنده"
+    },
+    {
+      "module": "users",
+      "permission": "users",
+      "label": "ایجاد کاربر"
+    },
+    {
+      "module": "users",
+      "permission": "users",
+      "label": "ویرایش کاربر"
+    },
+    {
+      "module": "users",
+      "permission": "users",
+      "label": "فعال/غیرفعال‌سازی حساب"
+    },
+    {
+      "module": "users",
+      "permission": "users",
+      "label": "تغییر مجوز نقش"
+    },
+    {
+      "module": "users",
+      "permission": "users",
+      "label": "تعریف نقش جدید"
+    }
+  ],
+  "pages": [
+    {
+      "key": "dashboard",
+      "name": "داشبورد",
+      "path": "/"
+    },
+    {
+      "key": "trace",
+      "name": "رهگیری یکپارچه",
+      "path": "/trace"
+    },
+    {
+      "key": "shipments",
+      "name": "ورود محموله",
+      "path": "/shipments"
+    },
+    {
+      "key": "inventory",
+      "name": "موجودی انبار",
+      "path": "/inventory"
+    },
+    {
+      "key": "handover",
+      "name": "تحویل به تولید",
+      "path": "/handover"
+    },
+    {
+      "key": "imei",
+      "name": "IMEI و برنامه تولید",
+      "path": "/imei"
+    },
+    {
+      "key": "basket",
+      "name": "آماده‌سازی سبد",
+      "path": "/basket"
+    },
+    {
+      "key": "assembly",
+      "name": "خط مونتاژ",
+      "path": "/assembly"
+    },
+    {
+      "key": "finalQc",
+      "name": "QC نهایی و بسته‌بندی",
+      "path": "/final-qc"
+    },
+    {
+      "key": "stageQc",
+      "name": "کیفیت مرحله‌ای",
+      "path": "/stage-qc"
+    },
+    {
+      "key": "defects",
+      "name": "مرجوعی‌ها",
+      "path": "/defects"
+    },
+    {
+      "key": "finished",
+      "name": "انبار محصول",
+      "path": "/finished"
+    },
+    {
+      "key": "reports",
+      "name": "گزارشات",
+      "path": "/reports"
+    },
+    {
+      "key": "master",
+      "name": "اطلاعات پایه",
+      "path": "/master"
+    },
+    {
+      "key": "users",
+      "name": "کاربران و دسترسی",
+      "path": "/users"
+    },
+    {
+      "key": "audit",
+      "name": "سوابق ممیزی",
+      "path": "/audit"
+    }
+  ],
+  "counts": {
+    "commands": 73,
+    "navigationPages": 16,
+    "traceabilityRows": 110
+  },
+  "extractionLimits": "Command regex does not cover all read-only UI interactions, reports, prints or modal states; P00 must expand. Distribution commands are present but not in navigation."
+}
+

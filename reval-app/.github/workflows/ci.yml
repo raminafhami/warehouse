@@ -1,0 +1,102 @@
+name: REVAL checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      previous_ref:
+        description: Previous release tag or commit in this repository
+        required: true
+        type: string
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm test
+      - name: Start isolated test replica set
+        run: |
+          docker run --name reval-test-db -d -p 127.0.0.1:27017:27017 mongo:8.0.13 --replSet rs0 --bind_ip_all
+          for step in $(seq 1 30); do
+            docker exec reval-test-db mongosh --quiet --eval 'quit(db.hello().ok ? 0 : 1)' && break
+            sleep 2
+          done
+          docker exec reval-test-db mongosh --quiet --eval 'rs.initiate({_id:"rs0", members:[{_id:0,host:"127.0.0.1:27017"}]})'
+          for step in $(seq 1 30); do
+            docker exec reval-test-db mongosh --quiet --eval 'quit(db.hello().isWritablePrimary ? 0 : 1)' && exit 0
+            sleep 2
+          done
+          exit 1
+      - run: npm run test:integration
+        env:
+          TEST_MONGODB_URI: mongodb://127.0.0.1:27017/reval_test?replicaSet=rs0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify printed labels in Chrome
+        env:
+          TEST_MONGODB_URI: mongodb://127.0.0.1:27017/reval_test?replicaSet=rs0
+        run: |
+          print_deps="$(mktemp -d)"
+          npm install --prefix "$print_deps" --no-audit --no-fund playwright-core@1.65.1
+          python -m pip install pypdfium2==5.15.2 pillow==13.0.0 zxing-cpp==3.1.1
+          REVAL_QA_PLAYWRIGHT="$print_deps/node_modules/playwright-core" \
+            REVAL_QA_CHROME="$(command -v google-chrome)" REVAL_QA_PYTHON=python \
+            node apps/api/test/support/print-labels.js
+      - name: Build and smoke-test Compose
+        env:
+          WEB_PORT: "8080"
+        run: |
+          export MONGO_ROOT_PASSWORD="$(openssl rand -hex 32)"
+          export MONGO_PASSWORD="$(openssl rand -hex 32)"
+          export REVAL_ADMIN_USERNAME=reval_admin
+          export REVAL_ADMIN_PASSWORD="$(openssl rand -hex 24)"
+          docker compose up --build --wait --wait-timeout 180
+          curl --fail --retry 5 --retry-connrefused http://127.0.0.1:8080/api/v1/health/ready
+          curl --fail http://127.0.0.1:8080/
+          APP_ORIGIN=https://reval-staging.example.invalid REVAL_IMAGE_TAG="$GITHUB_SHA" \
+            docker compose -f compose.yaml -f compose.staging.yaml config --quiet
+      - name: Clean up CI services
+        if: always()
+        env:
+          MONGO_ROOT_PASSWORD: unused
+          MONGO_PASSWORD: unused
+        run: |
+          docker compose down --volumes
+          docker rm -f reval-test-db 2>/dev/null || true
+
+  release-rehearsal:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Verify Compose upgrade and rollback
+        env:
+          BASELINE_REF: ${{ inputs.previous_ref }}
+        run: |
+          baseline_sha="$(git rev-parse --verify --end-of-options "${BASELINE_REF}^{commit}")"
+          if [ "$baseline_sha" = "$(git rev-parse HEAD)" ]; then
+            echo "Choose a previous release that differs from the candidate." >&2
+            exit 1
+          fi
+          git worktree add --detach "$RUNNER_TEMP/reval-previous" "$baseline_sha"
+          node apps/api/test/support/compose-upgrade.js "$RUNNER_TEMP/reval-previous"

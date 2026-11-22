@@ -1,0 +1,21 @@
+import { openProto } from './state.mjs';
+const { browser, page, errors } = await openProto(process.argv[2]);
+const opts = await page.$$eval('select option', os => os.slice(0, 3).map(o => ({ v: o.value, t: o.textContent })));
+console.log('options', opts);
+await page.selectOption('select', opts[0].v);
+console.log('after select', await page.$$eval('input', is => is.map(i => i.type + '=' + (i.type === 'password' ? (i.value ? '<filled>' : '<empty>') : i.value))));
+const pw = page.locator('input[type=password]');
+if (!(await pw.inputValue())) await pw.fill('demo');
+await page.click('button:has-text("ورود به سامانه")');
+await page.waitForTimeout(1000);
+console.log('hash', await page.evaluate(() => location.hash));
+await page.evaluate(() => { location.hash = '/imei'; });
+await page.waitForTimeout(800);
+const classes = await page.evaluate(() => {
+  const c = {}; document.querySelectorAll('main *, [class]').forEach(e => String(e.className).split(/\s+/).forEach(k => k && (c[k] = (c[k] || 0) + 1)));
+  return Object.entries(c).sort((a, b) => b[1] - a[1]).slice(0, 80).map(x => x.join(':')).join(' ');
+});
+console.log(classes);
+console.log('nav', await page.$$eval('nav a, aside a', as => as.map(a => a.getAttribute('href') + ' ' + a.innerText.trim()).slice(0, 40)));
+console.log('errors', errors);
+await browser.close();

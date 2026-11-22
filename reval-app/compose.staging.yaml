@@ -1,0 +1,17 @@
+services:
+  mongo:
+    image: ${REVAL_IMAGE_PREFIX:-reval-staging}/mongo:${REVAL_IMAGE_TAG:?Set the staging release commit tag}
+    environment:
+      MONGO_INITDB_DATABASE: reval_staging
+    restart: unless-stopped
+  api:
+    image: ${REVAL_IMAGE_PREFIX:-reval-staging}/api:${REVAL_IMAGE_TAG:?Set the staging release commit tag}
+    environment:
+      NODE_ENV: staging
+      APP_ORIGIN: ${APP_ORIGIN:?Set the approved HTTPS staging origin}
+      MONGODB_URI: mongodb://reval_app:${MONGO_PASSWORD:?Set MONGO_PASSWORD in .env}@mongo:27017/reval_staging?replicaSet=rs0&authSource=reval_staging
+      ALLOW_DEMO_SEED: "false"
+    restart: unless-stopped
+  web:
+    image: ${REVAL_IMAGE_PREFIX:-reval-staging}/web:${REVAL_IMAGE_TAG:?Set the staging release commit tag}
+    restart: unless-stopped

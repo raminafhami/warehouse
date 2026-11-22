@@ -1,0 +1,18 @@
+{
+  "name": "@reval/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=../../.env --watch src/server.js",
+    "start": "node --env-file-if-exists=../../.env src/server.js",
+    "build": "node --check src/server.js",
+    "migrate": "node --env-file-if-exists=../../.env src/database/cli.js migrate",
+    "seed": "node --env-file-if-exists=../../.env src/database/cli.js seed"
+  },
+  "dependencies": {
+    "@bwip-js/node": "4.11.4",
+    "express": "5.3.0",
+    "mongodb": "7.8.0",
+    "mongoose": "9.12.2"
+  }
+}

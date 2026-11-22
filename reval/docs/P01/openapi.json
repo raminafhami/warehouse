@@ -1,0 +1,668 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "REVAL API — طرح اولیهٔ موجودی",
+    "version": "0.1.0",
+    "description": "پیش‌نویس قرارداد P01. شامل مسیرهای اولیهٔ دریافت، رزرو و حواله برای بررسی G1."
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "security": [
+    {
+      "sessionCookie": []
+    }
+  ],
+  "paths": {
+    "/shipments/{id}/receipts": {
+      "post": {
+        "operationId": "recordShipmentReceipt",
+        "summary": "ثبت دریافت محموله",
+        "tags": [
+          "Shipments"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{24}$"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentReceiptCommand"
+              },
+              "example": {
+                "version": 0,
+                "acceptedLines": [
+                  {
+                    "cartonId": "507f1f77bcf86cd799439011",
+                    "quantity": "4"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "فرمان ثبت شد یا پاسخ قبلی بازیابی شد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommandResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ورودی نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "نشست نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "عملیات در محدودهٔ کاربر مجاز نیست.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "سند در محدودهٔ کاربر پیدا نشد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "تعارض وضعیت، نسخه، کلید یا مقدار قابل تخصیص.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/material-requests/{id}/reservations": {
+      "post": {
+        "operationId": "reserveMaterial",
+        "summary": "رزرو موجودی برای درخواست",
+        "tags": [
+          "Materials"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{24}$"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservationCommand"
+              },
+              "example": {
+                "version": 0,
+                "lines": [
+                  {
+                    "cartonId": "507f1f77bcf86cd799439011",
+                    "quantity": "4"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "فرمان ثبت شد یا پاسخ قبلی بازیابی شد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommandResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ورودی نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "نشست نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "عملیات در محدودهٔ کاربر مجاز نیست.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "سند در محدودهٔ کاربر پیدا نشد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "تعارض وضعیت، نسخه، کلید یا مقدار قابل تخصیص.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/material-requests/{id}/deliveries": {
+      "post": {
+        "operationId": "issueMaterialDelivery",
+        "summary": "صدور حواله",
+        "tags": [
+          "Materials"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{24}$"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryIssueCommand"
+              },
+              "example": {
+                "version": 1,
+                "lines": [
+                  {
+                    "cartonId": "507f1f77bcf86cd799439011",
+                    "quantity": "4"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "فرمان ثبت شد یا پاسخ قبلی بازیابی شد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommandResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ورودی نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "نشست نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "عملیات در محدودهٔ کاربر مجاز نیست.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "سند در محدودهٔ کاربر پیدا نشد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "تعارض وضعیت، نسخه، کلید یا مقدار قابل تخصیص.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/material-deliveries/{id}/receipts": {
+      "post": {
+        "operationId": "recordDeliveryReceipt",
+        "summary": "دریافت حواله در خط",
+        "tags": [
+          "Materials"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{24}$"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryReceiptCommand"
+              },
+              "example": {
+                "version": 1,
+                "acceptedLines": [
+                  {
+                    "cartonId": "507f1f77bcf86cd799439011",
+                    "quantity": "4"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "فرمان ثبت شد یا پاسخ قبلی بازیابی شد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommandResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ورودی نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "نشست نامعتبر.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "عملیات در محدودهٔ کاربر مجاز نیست.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "سند در محدودهٔ کاربر پیدا نشد.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "تعارض وضعیت، نسخه، کلید یا مقدار قابل تخصیص.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "sessionCookie": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "reval_session",
+        "description": "نشست سمت سرور. کوکی HttpOnly و در محیط TLS با Secure. اعتبارسنجی Origin برای درخواست‌های تغییردهنده."
+      }
+    },
+    "schemas": {
+      "Quantity": {
+        "type": "string",
+        "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+        "description": "سرویس برای هر اقدام، مثبت یا نامنفی بودن مقدار و گام واحد SKU را بررسی می‌کند.",
+        "example": "4"
+      },
+      "CartonLine": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "cartonId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+          },
+          "quantity": {
+            "$ref": "#/components/schemas/Quantity"
+          }
+        },
+        "required": [
+          "cartonId",
+          "quantity"
+        ]
+      },
+      "ShipmentReceiptCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "acceptedLines": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/CartonLine"
+            }
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 1000
+          }
+        },
+        "required": [
+          "version",
+          "acceptedLines"
+        ]
+      },
+      "ReservationCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "lines": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/CartonLine"
+            }
+          }
+        },
+        "required": [
+          "version",
+          "lines"
+        ]
+      },
+      "DeliveryIssueCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "lines": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/CartonLine"
+            }
+          }
+        },
+        "required": [
+          "version",
+          "lines"
+        ]
+      },
+      "DeliveryReceiptCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "acceptedLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CartonLine"
+            }
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 1000
+          }
+        },
+        "required": [
+          "version",
+          "acceptedLines"
+        ]
+      },
+      "CommandResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+          },
+          "documentId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+          },
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "discrepancyId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+          }
+        },
+        "required": [
+          "id",
+          "documentId",
+          "status",
+          "version"
+        ]
+      },
+      "CommandResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "enum": [
+              200
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "result": {
+            "$ref": "#/components/schemas/CommandResult"
+          }
+        },
+        "required": [
+          "statusCode",
+          "message",
+          "result"
+        ]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "statusCode": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "correlationId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "statusCode",
+          "message",
+          "code",
+          "correlationId"
+        ]
+      }
+    }
+  }
+}
